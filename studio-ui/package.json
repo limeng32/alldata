@@ -5,8 +5,8 @@
   "author": "AllDataDC",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "vue-cli-service serve --port 8013",
-    "build:prod": "vue-cli-service build",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --port 8013",
+    "build:prod": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
     "preview": "node build/index.js --preview",
     "lint": "eslint --ext .js,.vue src",
@@ -46,6 +46,7 @@
     "jsplumb": "^2.14.6",
     "jszip": "^3.7.1",
     "mavon-editor": "^2.9.1",
+    "micro-ui": "file:",
     "moment": "^2.29.1",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",

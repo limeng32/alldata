@@ -14,7 +14,7 @@ import java.io.Serializable;
 */
 @Getter
 @Setter
-@NoArgsConstructor
+// @NoArgsConstructor
 public class JobDto extends BaseDTO implements Serializable {
 
     private Long id;
@@ -24,6 +24,8 @@ public class JobDto extends BaseDTO implements Serializable {
     private String name;
 
     private Boolean enabled;
+
+    public JobDto(){}
 
     public JobDto(String name, Boolean enabled) {
         this.name = name;
